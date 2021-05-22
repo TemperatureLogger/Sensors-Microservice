@@ -37,12 +37,12 @@ while True:
     entry = {}
 
     #get dummy read
-    tstamp = time.strftime("%Y-%d-%b:%H-%M-%S")
+    tstamp = time.strftime("%Y-%d-%b %H-%M-%S")
     temperature = random.uniform(MIN_TEMP_CELSIUS, MAX_TEMP_CELSIUS)
     humidity = random.uniform(MIN_HUMIDITY_PERCENT, MAX_HUMIDITY_PERCENT)
 
     #add to dictionary
-    #entry['tstamp'] = tstamp
+    entry['tstamp'] = tstamp
     entry['temperature'] = temperature
     entry['humidity'] = humidity
 
