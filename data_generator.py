@@ -4,6 +4,7 @@ import time
 import json
 import sys
 import requests
+import math
 
 #Middle server URL
 url = 'http://157.245.65.94:3000/api/measurements'
@@ -37,7 +38,8 @@ while True:
     entry = {}
 
     #get dummy read
-    tstamp = time.strftime("%Y-%d-%b %H-%M-%S")
+    # tstamp = time.strftime("%Y-%d-%b %H-%M-%S")
+    tstamp = math.trunc(time.time())
     temperature = random.uniform(MIN_TEMP_CELSIUS, MAX_TEMP_CELSIUS)
     humidity = random.uniform(MIN_HUMIDITY_PERCENT, MAX_HUMIDITY_PERCENT)
 
